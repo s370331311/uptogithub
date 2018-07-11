@@ -4,9 +4,7 @@
     "description": "Extension for ZYRobot micro:bit",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "neopixel": "github:microsoft/pxt-neopixel#v0.3.10",
-        "cbit_IR": "github:zhuning239/cBit_IR"
+        "core": "*"
     },
     "files": [
         "README.md",
