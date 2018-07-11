@@ -1024,7 +1024,7 @@ namespace cbit_小车类 {
         return temp;
 
     }
-    //% blockId=cbit_Line_Sensor block="巡线传感器1|位置 %direct|检测到 %value"
+    //% blockId=cbit_Line_Sensor1 block="巡线传感器1|位置 %direct|检测到 %value"
     //% weight=94
     //% blockGap=10
     //% color="#006400"
@@ -1070,7 +1070,7 @@ namespace cbit_小车类 {
 
     }
 	
-    //% blockId=cbit_Line_Sensor block="巡线传感器2|位置 %direct|检测到 %value"
+    //% blockId=cbit_Line_Sensor2 block="巡线传感器2|位置 %direct|检测到 %value"
     //% weight=94
     //% blockGap=10
     //% color="#006400"
