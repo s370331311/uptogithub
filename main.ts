@@ -468,7 +468,7 @@ namespace cbit_小车类 {
         Cyan,
         //% blockId="Pinkish" block="品红"
         Pinkish,
-        //% blockId="Green" block="黄色"
+        //% blockId="Green" block="黄"
         Yellow,
 
     }
