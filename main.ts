@@ -1,6 +1,6 @@
 /*
 R
-modified from liusen
+modified from fyshi
 load dependency
 "cbit": "file:../pxt-cbit"
 */
@@ -1029,7 +1029,7 @@ namespace cbit_小车类 {
     //% blockGap=10
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
-    export function Line_Sensor(direct: enPos, value: enLineState): boolean {
+    export function Line_Sensor1(direct: enPos, value: enLineState): boolean {
 
         let temp: boolean = false;
 
@@ -1068,6 +1068,45 @@ namespace cbit_小车类 {
         }
         return temp;
 
+    }
+    export function Line_Sensor2(direct: enPos, value: enLineState): boolean {
+
+        let temp: boolean = false;
+
+        switch (direct) {
+            case enPos.LeftState: {
+                if (pins.analogReadPin(AnalogPin.P14) < 500) {
+                    if (value == enLineState.White) {
+                        temp = true;
+                    }
+                    setPwm(7, 0, 4095);
+                }
+                else {
+                    if (value == enLineState.Black) {
+                        temp = true;
+                    }
+                    setPwm(7, 0, 0);
+                }
+                break;
+            }
+
+            case enPos.RightState: {
+                if (pins.analogReadPin(AnalogPin.P15) < 500) {
+                    if (value == enLineState.White) {
+                        temp = true;
+                    }
+                    setPwm(6, 0, 4095);
+                }
+                else {
+                    if (value == enLineState.Black) {
+                        temp = true;
+                    }
+                    setPwm(6, 0, 0);
+                }
+                break;
+            }
+        }
+        return temp;
     }
     //% blockId=cbit_CarCtrl block="小车控制|%index"
     //% weight=93
