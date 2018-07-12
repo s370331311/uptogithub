@@ -398,12 +398,12 @@ namespace cbit_motor {
         return temp;
 
     }
-    //% blockId=cbit_Line_Sensor1 block="巡线传感器1|位置 %direct|检测到 %value"
+    //% blockId=cbit_Line_Sensor block="巡线传感器|位置 %direct|检测到 %value"
     //% weight=94
     //% blockGap=10
     //% color="#006400"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
-    export function Line_Sensor1(direct: enPos, value: enLineState): boolean {
+    export function Line_Sensor(direct: enPos, value: enLineState): boolean {
 
         let temp: boolean = false;
 
@@ -443,52 +443,7 @@ namespace cbit_motor {
         return temp;
 
     }
-	//% blockId=cbit_Line_Sensor2 block="巡线传感器2|位置 %direct|检测到 %value"
-    //% weight=94
-    //% blockGap=10
-    //% color="#006400"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
-    export function Line_Sensor2(direct: enPos, value: enLineState): boolean {
-
-        let temp: boolean = false;
-
-        switch (direct) {
-            case enPos.LeftState: {
-                if (pins.digitalReadPin(DigitalPin.P14) == 1) {
-                    if (value == enLineState.White) {
-                        temp = true;
-                    }
-                    setPwm(7, 0, 4095);
-                }
-                else {
-                    if (value == enLineState.Black) {
-                        temp = true;
-                    }
-                    setPwm(7, 0, 0);
-                }
-                break;
-            }
-
-            case enPos.RightState: {
-                if (pins.digitalReadPin(DigitalPin.P15) == 1) {
-                    if (value == enLineState.White) {
-                        temp = true;
-                    }
-                    setPwm(6, 0, 4095);
-                }
-                else {
-                    if (value == enLineState.Black) {
-                        temp = true;
-                    }
-                    setPwm(6, 0, 0);
-                }
-                break;
-            }
-        }
-        return temp;
-
-    }
-
+	
     //% blockId=cbit_CarCtrl block="小车控制|%index"
     //% weight=93
     //% blockGap=10
