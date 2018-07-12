@@ -20,7 +20,7 @@ namespace cbit_motor {
     const ALL_LED_OFF_H = 0xFD
 
     const PRESCALE = 0xFE
-
+	let initialized = false
 
     export enum enPos {
 
