@@ -454,7 +454,7 @@ namespace cbit_motor {
 
         switch (direct) {
             case enPos.LeftState: {
-                if (pins.analogReadPin(AnalogPin.P1) < 500) {
+                if (pins.analogReadPin(AnalogPin.P14) < 500) {
                     if (value == enLineState.White) {
                         temp = true;
                     }
@@ -470,7 +470,7 @@ namespace cbit_motor {
             }
 
             case enPos.RightState: {
-                if (pins.analogReadPin(AnalogPin.P2) < 500) {
+                if (pins.analogReadPin(AnalogPin.P15) < 500) {
                     if (value == enLineState.White) {
                         temp = true;
                     }
