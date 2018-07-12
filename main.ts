@@ -2,7 +2,7 @@
 R
 modified from fyshi
 load dependency
-"cbit": "file:../pxt-cbit"
+"uptogithub": "file:../pxt-uptogithub"
 */
 
 
